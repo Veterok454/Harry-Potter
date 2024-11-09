@@ -2,8 +2,255 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <audio id="background-audio" autoplay loop>
+            <source src="./media/ways-of-the-wizard.mp3" type="audio/mpeg" />
+          </audio>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Welcome to the world <br />
+              of Harry Potter
+            </h1>
+            <button id="show-all-btn" class="hero-button" type="button">
+              Show all characters
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2 class="visually-hidden">Characters</h2>
+          <div id="category-buttons" style="display: none">
+            <ul class="characters-cards">
+              <li class="hero-content">
+                <img
+                  class="characters-image"
+                  src="./images/students.jpg"
+                  alt="The Hogwarts students"
+                />
+                <button
+                  class="category-btn"
+                  data-category="students"
+                  type="button"
+                >
+                  Hogwarts students
+                </button>
+              </li>
+              <li class="hero-content">
+                <img
+                  class="characters-image"
+                  src="./images/teachers.jpg"
+                  alt="The Hogwarts staff"
+                />
+                <button
+                  class="category-btn"
+                  data-category="teachers"
+                  type="button"
+                >
+                  Hogwarts staff
+                </button>
+              </li>
+              <li class="hero-content">
+                <img
+                  class="characters-image"
+                  src="./images/characters.jpg"
+                  alt="Characters in a particular house"
+                />
+                <button
+                  class="category-btn"
+                  data-category="houses"
+                  type="button"
+                >
+                  Characters in a particular house
+                </button>
+              </li>
+            </ul>
+          </div>
+          <h2 id="category-title" class="category-title"></h2>
+          <div id="house-buttons" style="display: none">
+            <div class="houses-button">
+              <button class="house-btn" data-house="gryffindor" type="button">
+                <img src="./images/gryffindor.svg" alt="symbol of Gryffindor" />
+                <span>Gryffindor</span>
+              </button>
+
+              <button class="house-btn" data-house="slytherin" type="button">
+                <img src="./images/slytherin.svg" alt="symbol of Slytherin" />
+                <span>Slytherin</span>
+              </button>
+
+              <button class="house-btn" data-house="ravenclaw" type="button">
+                <img src="./images/ravenclaw.svg" alt="symbol of Ravenclaw" />
+                <span>Ravenclaw</span>
+              </button>
+
+              <button class="house-btn" data-house="hufflepuff" type="button">
+                <img src="./images/hufflepuff.svg" alt="symbol of Hufflepuff" />
+                <span>Hufflepuff</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card students gryffindor">
+              <h3 class="secondary-title">Harry Potter</h3>
+              <p class="descr">The boy who lived in</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">31 July 1980</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students gryffindor">
+              <h3 class="secondary-title">Hermione Granger</h3>
+              <p class="descr">The girl who lived in</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">19 September 1979</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students gryffindor">
+              <h3 class="secondary-title">Ron Weasley</h3>
+              <p class="descr">The boy who lived in</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">01 March 1980</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students slytherin">
+              <h3 class="secondary-title">Draco Malfoy</h3>
+              <p class="descr">The boy who lived in</p>
+              <p class="descr">Slytherin</p>
+              <p class="descr">05 June 1980</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students hufflepuff">
+              <h3 class="secondary-title">Cedric Diggory</h3>
+              <p class="descr">The boy who lived in</p>
+              <p class="descr">Hufflepuff</p>
+              <p class="descr">31 July 1980</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students ravenclaw">
+              <h3 class="secondary-title">Cho Chang</h3>
+              <p class="descr">The girl who lived in</p>
+              <p class="descr">Ravenclaw</p>
+              <p class="descr">07 April 1979</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students gryffindor">
+              <h3 class="secondary-title">Neville Longbottom</h3>
+              <p class="descr">The boy who lived in</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">30 July 1980</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card students ravenclaw">
+              <h3 class="secondary-title">Luna Lovegood</h3>
+              <p class="descr">The girl who lived in</p>
+              <p class="descr">Ravenclaw</p>
+              <p class="descr">13 February 1981</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers gryffindor">
+              <h3 class="secondary-title">Minerva McGonagall</h3>
+              <p class="descr">A Scottish half-blood witch</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">04 October 1925</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers slytherin">
+              <h3 class="secondary-title">Severus Snape</h3>
+              <p class="descr">An English half-blood Princ</p>
+              <p class="descr">Slytherin</p>
+              <p class="descr">09 January 1960</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers gryffindor">
+              <h3 class="secondary-title">Rubeus Hagrid</h3>
+              <p class="descr">An English half-giant wizard</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">06 December 1928</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers gryffindor">
+              <h3 class="secondary-title">Remus Lupin</h3>
+              <p class="descr">A half-blood wizard</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">10 March 1960</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers slytherin">
+              <h3 class="secondary-title">Horace Slughorn</h3>
+              <p class="descr">A wizard</p>
+              <p class="descr">Slytherin</p>
+              <p class="descr">28 April between 1882 and 1913</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers slytherin">
+              <h3 class="secondary-title">Dolores Umbridge</h3>
+              <p class="descr">A half-blood witch</p>
+              <p class="descr">Slytherin</p>
+              <p class="descr">26 August 1961 or earlier</p>
+              <button class="info-button" type="button">
+                <span>Read more</span>
+                <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers gryffindor">
+              <h3 class="secondary-title">Argus Filch</h3>
+              <p class="descr">A Squib and the caretaker</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">In or before 1951</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+            <div class="card teachers gryffindor">
+              <h3 class="secondary-title">Albus Dumbledore</h3>
+              <p class="descr">An English half-blood wizard</p>
+              <p class="descr">Gryffindor</p>
+              <p class="descr">Between 16 and 31 August 1881</p>
+              <button class="info-button" type="button">
+                Read more <img src="./images/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/audio.js"></script>
+    <script src="./js/buttons.js"></script>
+  </body>
 </html>
