@@ -11,18 +11,29 @@
     <main>
       <section class="hero-section">
         <div class="container">
-          <audio id="background-audio" autoplay loop>
-            <source src="./media/ways-of-the-wizard.mp3" type="audio/mpeg" />
-          </audio>
-
           <div class="hero-content">
+            <svg class="icon medium" width="20" height="20">
+              <use href="./images/star.svg#icon-star"></use>
+            </svg>
             <h1 class="hero-title">
               Welcome to the world <br />
               of Harry Potter
             </h1>
-            <button id="show-all-btn" class="hero-button" type="button">
-              Show all characters
-            </button>
+            <div id="audio-container">
+              <svg class="icon small" width="16" height="16">
+                <use href="./images/star.svg#icon-star"></use>
+              </svg>
+              <audio id="background-music" loop>
+                <source
+                  src="./media/ways-of-the-wizard.mp3"
+                  type="audio/mpeg"
+                />
+                Your browser does not support audio
+              </audio>
+              <button id="show-all-btn" class="hero-button" type="button">
+                Show all characters and switch on the music
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -78,9 +89,11 @@
           </div>
 
           <h2 id="category-title" class="category-title">
-            <svg width="64" height="64" class="category-icon">
-              <use href="./images/star.svg#icomoon-ignore"></use>
-            </svg>
+            <div class="icons-wrapper">
+              <svg class="icon big" width="36" height="36">
+                <use href="./images/star.svg#icon-star"></use>
+              </svg>
+            </div>
           </h2>
 
           <div id="house-buttons" style="display: none">
