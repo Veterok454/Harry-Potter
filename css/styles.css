@@ -70,23 +70,31 @@ ul {
 
 /*Hero section*/
 .hero-section {
-  padding: 100px 0 300px 0;
+  padding: 60px 0 140px 0;
   background-image: linear-gradient(
       0deg,
-      rgba(29, 29, 29, 100%) 12%,
-      rgba(29, 29, 29, 0%) 21%
+      rgba(29, 29, 29, 100%) 1%,
+      rgba(29, 29, 29, 0%) 11%
     ),
     linear-gradient(
       180deg,
-      rgba(29, 29, 29, 100%) 14%,
-      rgba(29, 29, 29, 91%) 24%,
-      rgba(29, 29, 29, 82%) 34%,
+      rgba(29, 29, 29, 100%) 7%,
+      rgba(29, 29, 29, 91%) 25%,
+      rgba(29, 29, 29, 82%) 31%,
       rgba(29, 29, 29, 0%) 73%
     ),
     url(../images/hero-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+
+  @media (max-width: 684px) {
+    padding: 0 0 130px 0;
+  }
+
+  @media (max-width: 607px) {
+    background-position: center;
+  }
 }
 
 .hero-content {
@@ -106,6 +114,26 @@ ul {
   line-height: 1.25;
   letter-spacing: 0.8px;
   margin-bottom: 80px;
+
+  @media (max-width: 1200px) {
+    font-size: 64px;
+  }
+
+  @media (max-width: 891px) {
+    font-size: 56px;
+  }
+
+  @media (max-width: 789px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 684px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 606px) {
+    font-size: 80px;
+  }
 }
 
 .hero-button {
@@ -119,6 +147,10 @@ ul {
   line-height: 1.3;
   padding: 18px 36px;
   transition: transform 0.3s ease-in;
+
+  @media (max-width: 489px) {
+    font-size: 28px;
+  }
 }
 
 .hero-button:hover {
@@ -354,12 +386,8 @@ ul {
   width: 100%;
   margin-bottom: 100px;
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media (max-width: 480px) {
@@ -370,21 +398,18 @@ ul {
 .card {
   display: none;
   position: relative;
-  height: 452px;
   border-radius: 20px;
   padding: 16px;
-
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: calc(100%-60px / 4);
 }
 
 .portret {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  display: block;
-  transition: opacity 0.3s ease;
+  border-radius: 20px;
 }
 
 .overlay {
@@ -414,6 +439,18 @@ ul {
   font-weight: 500;
   margin-bottom: 8px;
   padding: 0 20px;
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 }
 
 .descr {
