@@ -93,7 +93,8 @@ ul {
   }
 
   @media (max-width: 607px) {
-    background-position: center;
+    padding: 0px;
+    background-position: left top;
   }
 }
 
@@ -131,8 +132,9 @@ ul {
     font-size: 42px;
   }
 
-  @media (max-width: 606px) {
-    font-size: 80px;
+  @media (max-width: 607px) {
+    margin-bottom: 20px;
+    font-size: 68px;
   }
 }
 
@@ -291,7 +293,7 @@ ul {
   margin-top: 48px;
   width: 100%;
 
-  @media (max-width: 480px) {
+  @media (max-width: 523px) {
     grid-template-columns: 1fr;
   }
 }
@@ -324,6 +326,19 @@ ul {
   padding: 18px 4px;
   margin-top: 20px;
   transition: transform 0.3s ease-in;
+
+  @media (max-width: 1120px) {
+    width: 100%;
+
+    @media (max-width: 914px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 523px) {
+      font-size: 18px;
+      margin-top: 0;
+    }
+  }
 }
 
 .category-btn:hover {
@@ -388,6 +403,7 @@ ul {
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   @media (max-width: 480px) {
@@ -399,7 +415,7 @@ ul {
   display: none;
   position: relative;
   border-radius: 20px;
-  padding: 16px;
+
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -440,22 +456,75 @@ ul {
   margin-bottom: 8px;
   padding: 0 20px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1180px) {
     font-size: 20px;
+    padding: 0 12px;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 995px) {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  @media (max-width: 810px) {
+    font-size: 12px;
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 609px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 537px) {
+    font-size: 9px;
+    padding: 0 8px;
+  }
+
+  @media (max-width: 480px) {
     font-size: 26px;
+    margin-bottom: 8px;
+    padding: 0 20px;
   }
 }
 
 .descr {
-  margin-bottom: 4px;
   padding: 0 20px;
+  margin: 0;
+
+  @media (max-width: 1180px) {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  @media (max-width: 995px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 810px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 609px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 537px) {
+    font-size: 9px;
+    padding: 0 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    padding: 0 20px;
+  }
 }
 
 .toggle-button {
@@ -471,6 +540,22 @@ ul {
   margin-top: 4px;
   cursor: pointer;
   transition: transform 0.3s ease-in;
+
+  @media (max-width: 1180px) {
+    font-size: 12px;
+    margin-top: 0;
+    padding-left: 12px;
+  }
+
+  @media (max-width: 537px) {
+    font-size: 9px;
+    padding-left: 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    padding-left: 20px;
+  }
 }
 
 .toggle-button:hover {
