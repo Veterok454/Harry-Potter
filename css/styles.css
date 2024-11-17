@@ -148,6 +148,8 @@ ul {
   font-weight: 700;
   line-height: 1.3;
   padding: 18px 36px;
+  box-shadow: 1px 1px 24px var(--color-brand-dark);
+  border: transparent;
   transition: transform 0.3s ease-in;
 
   @media (max-width: 489px) {
@@ -170,14 +172,16 @@ ul {
 }
 
 .category-title {
-  color: var(--color-brand-light);
+  color: var(--color-brand-dark);
   text-align: center;
   font-family: 'Bluu Next Cyrillic', sans-serif;
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0.8px;
   margin: 24px 0 24px 0;
+  margin: 20px;
+  opacity: 0.8;
 }
 
 .icon.small {
@@ -253,6 +257,7 @@ ul {
 
 .icon.big {
   fill: var(--color-brand-dark);
+
   animation: spin 10s infinite linear;
 }
 
@@ -399,7 +404,7 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 48px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
