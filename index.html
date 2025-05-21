@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <svg class="icon medium" width="20" height="20">
+              <use href="./images/star.svg#icon-star"></use>
+            </svg>
+            <h1 class="hero-title">
+              Welcome to the world <br />
+              of Harry Potter
+            </h1>
+            <div id="audio-container">
+              <svg class="icon small" width="16" height="16">
+                <use href="./images/star.svg#icon-star"></use>
+              </svg>
+              <audio id="background-music" loop>
+                <source
+                  src="./media/ways-of-the-wizard.mp3"
+                  type="audio/mpeg"
+                />
+                Your browser does not support audio
+              </audio>
+              <button id="show-all-btn" class="hero-button" type="button">
+                Show all characters and switch on the music
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2 class="visually-hidden">Characters</h2>
+
+          <div id="category-buttons" style="display: none">
+            <ul class="characters-cards">
+              <li class="characters-content">
+                <img
+                  class="characters-image"
+                  src="./images/students.jpg"
+                  alt="The Hogwarts students"
+                />
+                <button
+                  class="category-btn"
+                  data-category="students"
+                  type="button"
+                >
+                  Hogwarts students
+                </button>
+              </li>
+              <li class="characters-content">
+                <img
+                  class="characters-image"
+                  src="./images/teachers.jpg"
+                  alt="The Hogwarts staff"
+                />
+                <button
+                  class="category-btn"
+                  data-category="teachers"
+                  type="button"
+                >
+                  Hogwarts staff
+                </button>
+              </li>
+              <li class="characters-content">
+                <img
+                  class="characters-image"
+                  src="./images/characters.jpg"
+                  alt="Characters in a particular house"
+                />
+                <button
+                  class="category-btn"
+                  data-category="houses"
+                  type="button"
+                >
+                  Characters in a particular house
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <h2 id="category-title" class="category-title">
+            <svg class="icon big" width="36" height="36">
+              <use href="./images/star.svg#icon-star"></use>
+            </svg>
+            Hogwarts Castle
+            <svg class="icon big" width="36" height="36">
+              <use href="./images/star.svg#icon-star"></use>
+            </svg>
+          </h2>
+
+          <div id="house-buttons" style="display: none">
+            <div class="houses-button">
+              <button class="house-btn" data-house="gryffindor" type="button">
+                <img src="./images/gryffindor.svg" alt="symbol of Gryffindor" />
+                <span>Gryffindor</span>
+              </button>
+
+              <button class="house-btn" data-house="slytherin" type="button">
+                <img src="./images/slytherin.svg" alt="symbol of Slytherin" />
+                <span>Slytherin</span>
+              </button>
+
+              <button class="house-btn" data-house="ravenclaw" type="button">
+                <img src="./images/ravenclaw.svg" alt="symbol of Ravenclaw" />
+                <span>Ravenclaw</span>
+              </button>
+
+              <button class="house-btn" data-house="hufflepuff" type="button">
+                <img src="./images/hufflepuff.svg" alt="symbol of Hufflepuff" />
+                <span>Hufflepuff</span>
+              </button>
+            </div>
+          </div>
+
+          <ul class="card-container">
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/harry.jpg"
+                alt="Portret of Harry Potter"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Harry Potter</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Harry James Potter</p>
+                  <p class="descr">Born: 31-07-1980</p>
+                  <p class="descr">Ancestry: Half-blood wizard</p>
+                  <p class="descr">Wand: 11", Holly, phoenix feather</p>
+                  <p class="descr">Patronus: Stag</p>
+                  <p class="descr">Hogwarts years: 1991-1997</p>
+                  <p class="descr">Actor: Daniel Radcliff</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/hermione.jpg"
+                alt="Portret of Hermione Granger"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Hermione Granger</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Hermione Jean Granger</p>
+                  <p class="descr">Born: 19-09-1979</p>
+                  <p class="descr">Ancestry: Muggle-born witch</p>
+                  <p class="descr">Wand: 10¾", Vine, dragon heartstring</p>
+                  <p class="descr">Patronus: Otter</p>
+                  <p class="descr">Hogwarts years: 1991-1997</p>
+                  <p class="descr">Actress: Emma Watson</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/ron.jpg"
+                alt="Portret of Ronald Weasley"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Ron Weasley</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Ronald Bilius Weasley</p>
+                  <p class="descr">Born: 01-03-1980</p>
+                  <p class="descr">Ancestry: Pure-blood wizard</p>
+                  <p class="descr">Wand: 14", Willow, unicorn tail hair</p>
+                  <p class="descr">Patronus: Jack Russell terrier</p>
+                  <p class="descr">Hogwarts years: 1991-1997</p>
+                  <p class="descr">Actor: Rupert Grint</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students slytherin">
+              <img
+                class="portret"
+                src="./images/draco.jpg"
+                alt="Portret of Draco Malfoy"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Draco Malfoy</h3>
+                <p class="descr">Slytherin</p>
+                <div class="details">
+                  <p class="descr">Full name: Draco Lucius Malfoy</p>
+                  <p class="descr">Born: 05-06-1980</p>
+                  <p class="descr">Ancestry: Pure-blood wizard</p>
+                  <p class="descr">Wand: 10", Hawthorn, unicorn hair</p>
+                  <p class="descr">Patronus: None</p>
+                  <p class="descr">Hogwarts years: 1991-1998</p>
+                  <p class="descr">Actor: Alex Price</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students hufflepuff">
+              <img
+                class="portret"
+                src="./images/cedric.jpg"
+                alt="Portret of Cedric Diggory"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Cedric Diggory</h3>
+                <p class="descr">Hufflepuff</p>
+                <div class="details">
+                  <p class="descr">Full name: Cedric Diggory</p>
+                  <p class="descr">Born: September or October 1977</p>
+                  <p class="descr">Died: 24-06-1995</p>
+                  <p class="descr">Ancestry: British wizard</p>
+                  <p class="descr">Wand: 12¼", Ash, Unicorn hair</p>
+                  <p class="descr">Hogwarts years: 1989-1995</p>
+                  <p class="descr">Actor: Robert Pattinson</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students ravenclaw">
+              <img
+                class="portret"
+                src="./images/cho.jpg"
+                alt="Portret of Cho Chang"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Cho Chang</h3>
+                <p class="descr">Ravenclaw</p>
+                <div class="details">
+                  <p class="descr">Full name: Cho Chang</p>
+                  <p class="descr">Born: 1978 or 1979</p>
+                  <p class="descr">Ancestry: Pure-blood or half-blood witch</p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Swan</p>
+                  <p class="descr">Hogwarts years: 1990-1997</p>
+                  <p class="descr">Actress: Katie Leung</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/neville.jpg"
+                alt="Portret of Neville Longbottom"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Neville Longbottom</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Neville Longbottom</p>
+                  <p class="descr">Born: 30-07-1980</p>
+                  <p class="descr">Ancestry: Pure-blood wizard</p>
+                  <p class="descr">
+                    Wand: Unknown length, Cherry, unicorn hair
+                  </p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Hogwarts years: 1991-1998</p>
+                  <p class="descr">Actor: Matthew Lewis</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students ravenclaw">
+              <img
+                class="portret"
+                src="./images/luna.jpg"
+                alt="Portret of Luna Lovegood"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Luna Lovegood</h3>
+                <p class="descr">Ravenclaw</p>
+                <div class="details">
+                  <p class="descr">Full name: Luna Scamander (née Lovegood)</p>
+                  <p class="descr">Born: 13-02-1981</p>
+                  <p class="descr">Ancestry: Pure-blood or half-blood witch</p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Hare</p>
+                  <p class="descr">Hogwarts years: 1992-1999</p>
+                  <p class="descr">Actress: Evanna Lynch</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/ginny.jpg"
+                alt="Portret of Ginny Weasley"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Ginny Weasley</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">
+                    Full name: Ginevra Molly Potter (née Weasley)
+                  </p>
+                  <p class="descr">Born: 11-08-1981</p>
+                  <p class="descr">Ancestry: Pure-blood witch</p>
+                  <p class="descr">Wand: unknown length, Yew, unknown core</p>
+                  <p class="descr">Patronus: Horse</p>
+                  <p class="descr">Hogwarts years: 1992-1998</p>
+                  <p class="descr">Actress: Bonnie Wright</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/sirius.jpg"
+                alt="Portret of Sirius Black"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Sirius Black</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Sirius Black III</p>
+                  <p class="descr">Born: 03-11-1959</p>
+                  <p class="descr">Died: 18-06-1996</p>
+                  <p class="descr">Ancestry: Pure-blood wizard</p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Hogwarts years: 1971-1978</p>
+                  <p class="descr">Actor: Gary Oldman</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students slytherin">
+              <img
+                class="portret"
+                src="./images/voldemort.jpg"
+                alt="Portret of Voldemort"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Voldemort</h3>
+                <p class="descr">Slytherin</p>
+                <div class="details">
+                  <p class="descr">Full name: Tom Marvolo Riddle</p>
+                  <p class="descr">Born: 31-12-1926</p>
+                  <p class="descr">Died: 02-05-1998</p>
+                  <p class="descr">
+                    Ancestry: Half-blood wizard, also known as Dark wizard
+                  </p>
+                  <p class="descr">Wand: 13½", Yew, phoenix feather core</p>
+                  <p class="descr">Patronus: None</p>
+                  <p class="descr">Hogwarts years: 1938-1945</p>
+                  <p class="descr">Actor: Ralph Fiennes</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card students gryffindor">
+              <img
+                class="portret"
+                src="./images/scabbers.jpg"
+                alt="Portret of Wormtail"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Wormtail</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Peter Pettigrew</p>
+                  <p class="descr">
+                    Born: Between 01 September 1959 and 31 August 1960
+                  </p>
+                  <p class="descr">Died: Late March 1998</p>
+                  <p class="descr">Ancestry: Pure-blood or half-blood wizard</p>
+                  <p class="descr">Wand: 9¼", Chestnut, dragon heartstring</p>
+                  <p class="descr">Patronus: None</p>
+                  <p class="descr">Hogwarts years: 1971-1978</p>
+                  <p class="descr">Actor: Timothy Spall</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers gryffindor">
+              <img
+                class="portret"
+                src="./images/dumbledore.jpg"
+                alt="Portret of Professor Dumbledore"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Dumbledore</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">
+                    Full name: Albus Percival Wulfric Brian Dumbledore
+                  </p>
+                  <p class="descr">Born: Between 16 and 31 August 1881</p>
+                  <p class="descr">Died: 30-06-1997</p>
+                  <p class="descr">Ancestry: Half-blood wizard</p>
+                  <p class="descr">Wand: 15", Elder, Thestral tail hair core</p>
+                  <p class="descr">Patronus: Phoenix</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Richard Harris</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers gryffindor">
+              <img
+                class="portret"
+                src="./images/mcgonagall.jpg"
+                alt="Portret of Professor McGonagall"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor McGonagall</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Minerva McGonagall</p>
+                  <p class="descr">Born: 4 October, in or before 1892</p>
+                  <p class="descr">Ancestry: Half-blood witch</p>
+                  <p class="descr">Wand: 9½", Fir, dragon heartstring</p>
+                  <p class="descr">Patronus: Cat</p>
+                  <p class="descr">Marital status: Widowed</p>
+                  <p class="descr">Actress: Dame Maggie Smith</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers slytherin">
+              <img
+                class="portret"
+                src="./images/snape.jpg"
+                alt="Portret of Professor Snape"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Snape</h3>
+                <p class="descr">Slytherin</p>
+                <div class="details">
+                  <p class="descr">Full name: Severus Snape</p>
+                  <p class="descr">Born: 09-01-1960</p>
+                  <p class="descr">Died: 02-05-1998</p>
+                  <p class="descr">
+                    Ancestry: Half-blood wizard, also known as Half-Blood Prince
+                  </p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Doe</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Alan Rickman</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers gryffindor">
+              <img
+                class="portret"
+                src="./images/hagrid.jpg"
+                alt="Portret of Hagrid"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Hagrid</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Rubeus Hagrid</p>
+                  <p class="descr">Born: 06-12-1928</p>
+                  <p class="descr">Ancestry: Half-giant wizard</p>
+                  <p class="descr">Wand: 16", oak, unknown core</p>
+                  <p class="descr">Patronus: None</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Robbie Coltrane</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers gryffindor">
+              <img
+                class="portret"
+                src="./images/lupin.jpg"
+                alt="Portret of Professor Lupin"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Lupin</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Remus John Lupin</p>
+                  <p class="descr">Born: 10-03-1960</p>
+                  <p class="descr">Died: 02-05-1998</p>
+                  <p class="descr">
+                    Ancestry: Half-blood wizard, also known as Moony
+                  </p>
+                  <p class="descr">Wand: 10¼", Cypress, unicorn hair</p>
+                  <p class="descr">Patronus: Wolf</p>
+                  <p class="descr">Marital status: Married or widowed</p>
+                  <p class="descr">Actor: David Thewlis</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers slytherin">
+              <img
+                class="portret"
+                src="./images/slughorn.jpg"
+                alt="Portret of Professor Slughorn"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Slughorn</h3>
+                <p class="descr">Slytherin</p>
+                <div class="details">
+                  <p class="descr">Full name: Horace Eugene Flaccus Slughorn</p>
+                  <p class="descr">Born: 28 April between 1882 and 1913</p>
+                  <p class="descr">Ancestry: Pure-blood or half-blood wizard</p>
+                  <p class="descr">Wand: 10¼", Cedar, dragon heartstring</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Jim Broadbent</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers slytherin">
+              <img
+                class="portret"
+                src="./images/umbridge.jpg"
+                alt="Portret of Dolores Umbridge"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Dolores Umbridge</h3>
+                <p class="descr">Slytherin</p>
+                <div class="details">
+                  <p class="descr">Full name: Dolores Jane Umbridge</p>
+                  <p class="descr">Born: 26 August 1961 or earlier</p>
+                  <p class="descr">Ancestry: Half-blood witch</p>
+                  <p class="descr">Wand: 8", Birch, dragon heartstring</p>
+                  <p class="descr">Patronus: Persian cat</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actress: Imelda Staunton</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers hufflepuff">
+              <img
+                class="portret"
+                src="./images/sprout.jpg"
+                alt="Portret of Professor Sprout"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Sprout</h3>
+                <p class="descr">Hufflepuff</p>
+                <div class="details">
+                  <p class="descr">Full name: Pomona Sprout</p>
+                  <p class="descr">Born: 15 May, before 1967</p>
+                  <p class="descr">Ancestry: Pure-blood or half-blood witch</p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actress: Miriam Margolyes</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers ravenclaw">
+              <img
+                class="portret"
+                src="./images/trelawney.jpg"
+                alt="Portret of Professor Trelawney"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Trelawney</h3>
+                <p class="descr">Ravenclaw</p>
+                <div class="details">
+                  <p class="descr">Full name: Sybill Patricia Trelawney</p>
+                  <p class="descr">Born: 9 March, in or before 1962</p>
+                  <p class="descr">Ancestry: Half-blood witch</p>
+                  <p class="descr">Wand: 9½", hazel, unicorn hair</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Marital status: Divorced</p>
+                  <p class="descr">Actress: Emma Thompson</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers ravenclaw">
+              <img
+                class="portret"
+                src="./images/lockhart.jpg"
+                alt="Portret of Professor Lockhart"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Professor Lockhart</h3>
+                <p class="descr">Ravenclaw</p>
+                <div class="details">
+                  <p class="descr">Full name: Gilderoy Lockhart</p>
+                  <p class="descr">Born: 26-01-1964</p>
+                  <p class="descr">Ancestry: Half-blood wizard</p>
+                  <p class="descr">Wand: 9", cherry, dragon heartstring</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Kenneth Branagh</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers">
+              <img
+                class="portret"
+                src="./images/moody.jpg"
+                alt="Portret of Alastor Moody"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">"Mad-Eye" Moody</h3>
+                <p class="descr">Unknown</p>
+                <div class="details">
+                  <p class="descr">Full name: Alastor Moody</p>
+                  <p class="descr">Born: Before 1959</p>
+                  <p class="descr">Died: 27-07-1997</p>
+                  <p class="descr">Ancestry: Pure-blood wizard</p>
+                  <p class="descr">Wand: Unknown length, wood and core</p>
+                  <p class="descr">Patronus: Non-corporeal</p>
+                  <p class="descr">Marital status: Single</p>
+                  <p class="descr">Actor: Brendan Gleeson</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card teachers gryffindor">
+              <img
+                class="portret"
+                src="./images/filch.jpg"
+                alt="Portret of Argus Filch"
+              />
+              <div class="overlay"></div>
+              <div class="posi">
+                <h3 class="secondary-title">Argus Filch</h3>
+                <p class="descr">Gryffindor</p>
+                <div class="details">
+                  <p class="descr">Full name: Argus Filch</p>
+                  <p class="descr">
+                    A Squib and the caretaker of Hogwarts, also known as Filchy
+                  </p>
+                  <p class="descr">Born: In or before 1951</p>
+                  <p class="descr">Pet: cat Mrs Norris</p>
+                  <p class="descr">Actor: David Bradley</p>
+                </div>
+                <button class="toggle-button" type="button">
+                  <span>Read more </span>
+                  <span class="arrow"
+                    ><img src="./images/arrow.svg" alt="Arrow"
+                  /></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/audio.js"></script>
+    <script src="./js/buttons.js"></script>
+    <script src="./js/readmore.js"></script>
+  </body>
+</html>
